@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JPEDRAZAEXAMEN.VISTAS.REGISTRO"
+             Title="REGISTRO">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+
+            <!-- Mostrar Usuario Conectado -->
+            <Label Text="Usuario Conectado: [NombreUsuario]" HorizontalOptions="Center" FontSize="Medium"/>
+
+            <!-- Grid Principal -->
+            <Grid RowSpacing="10" ColumnSpacing="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Fecha -->
+                <Label Text="Fecha:" Grid.Row="0" Grid.Column="0"/>
+                <DatePicker Grid.Row="0" Grid.Column="1"/>
+
+                <!-- País -->
+                <Label Text="País:" Grid.Row="1" Grid.Column="0"/>
+                <Picker Grid.Row="1" Grid.Column="1">
+                    <Picker.ItemsSource>
+                        <!-- Agregar lista de países -->
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <!-- Ciudad -->
+                <Label Text="Ciudad:" Grid.Row="2" Grid.Column="0"/>
+                <Picker Grid.Row="2" Grid.Column="1">
+                    <Picker.ItemsSource>
+                        <!-- Agregar lista de ciudades -->
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <!-- Monto Inicial -->
+                <Label Text="Monto Inicial:" Grid.Row="3" Grid.Column="0"/>
+                <Entry x:Name="MontoInicialEntry" Grid.Row="3" Grid.Column="1" Keyboard="Numeric"/>
+
+                <!-- Pago Mensual -->
+                <Label Text="Pago Mensual:" Grid.Row="4" Grid.Column="0"/>
+                <Entry x:Name="PagoMensualEntry" Grid.Row="4" Grid.Column="1" IsEnabled="False"/>
+            </Grid>
+
+            <!-- Grid Secundario -->
+            <Grid RowSpacing="10" ColumnSpacing="10" Margin="0,20,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Nombre -->
+                <Label Text="Nombre:" Grid.Row="0" Grid.Column="0"/>
+                <Entry Grid.Row="0" Grid.Column="1" Placeholder="Ingresar Nombre"/>
+
+                <!-- Apellido -->
+                <Label Text="Apellido:" Grid.Row="0" Grid.Column="1"/>
+                <Entry Grid.Row="0" Grid.Column="2" Placeholder="Ingresar Apellido"/>
+
+                <!-- Edad -->
+                <Label Text="Edad:" Grid.Row="1" Grid.Column="0"/>
+                <Entry Grid.Row="1" Grid.Column="1" Placeholder="Ingresar Edad" Keyboard="Numeric"/>
+            </Grid>
+
+            <!-- Botón Ver Resumen -->
+            <Button Text="Ver Resumen" Margin="0,20,0,0" Clicked="OnVerResumenClicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

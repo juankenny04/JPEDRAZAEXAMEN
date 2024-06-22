@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JPEDRAZAEXAMEN.VISTAS.LOGIN"
+             Title="LOGIN">
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <Image Source=": https://sbsconsulting.com.ec/wp-content/uploads/2018/01/LOGOUISRAEL-768x209.png" 
+                   HorizontalOptions="Center" 
+                   VerticalOptions="Start" 
+                   Margin="20"/>
+
+            <Label Text="Login"
+                   TextColor="Red"
+                   FontSize="20"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Start"
+                   Margin="10"/>
+
+           
+            <Grid Padding="10" Margin="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Usuario:" Grid.Row="0" Grid.Column="0" VerticalOptions="Center"/>
+                <Entry x:Name="usernameEntry" Grid.Row="0" Grid.Column="1"/>
+
+                <Label Text="Contraseña:" Grid.Row="1" Grid.Column="0" VerticalOptions="Center"/>
+                <Entry x:Name="passwordEntry" Grid.Row="1" Grid.Column="1" IsPassword="True"/>
+            </Grid>
+
+            <Button Text="Iniciar Sesión"
+                    Clicked="OnLoginButtonClicked"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Start"
+                    Margin="20"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
